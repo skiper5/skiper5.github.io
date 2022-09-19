@@ -11,7 +11,7 @@ function valueLabelFormat(value) {
   let m = 100 / (2 * value + 3);
   let o = value * m;
 
-  return `m: ${m.toFixed(2)}%, o: ${o.toFixed(2)}% || 3m: ${(m * 3).toFixed(2)}%, 2o: ${(2*o).toFixed(2)}%`;
+  return [`m: ${m.toFixed(2)}%, o: ${o.toFixed(2)}%`, `3m: ${(m * 3).toFixed(2)}%, 2o: ${(2*o).toFixed(2)}%`];
 }
 
 
@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App" style={{paddingTop: 250, paddingBottom: 250, paddingRight: 20, paddingLeft: 20}}>
       <Typography id="non-linear-slider" gutterBottom>
-        Coef: {value} || {valueLabelFormat(calculateValue(value))}
+        Coef: {value} <br/> {valueLabelFormat(calculateValue(value))[0]} <br/> {valueLabelFormat(calculateValue(value))[1]}
       </Typography>
       <br/>
       <br/>
