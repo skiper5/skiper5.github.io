@@ -11,7 +11,7 @@ function valueLabelFormat(value) {
   let m = 100 / (2 * value + 3);
   let o = value * m;
 
-  return [`m: ${m.toFixed(2)}%, o: ${o.toFixed(2)}%`, `3m: ${(m * 3).toFixed(2)}%, 2o: ${(2*o).toFixed(2)}%`];
+  return [`gem: ${m.toFixed(2)}%, nv: ${o.toFixed(2)}%`, `3gem: ${(m * 3).toFixed(2)}%, 2nv: ${(2*o).toFixed(2)}%`];
 }
 
 
